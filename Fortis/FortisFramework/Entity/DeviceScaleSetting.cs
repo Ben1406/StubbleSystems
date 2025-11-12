@@ -1,0 +1,22 @@
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace FortisFramework.Entity;
+
+[Table("DeviceScaleSetting")]
+[PrimaryKey("DeviceName")]
+public class DeviceScaleSetting
+{
+    [Key] [Required] [StringLength(100)]
+    public string DeviceName { get; set; } = null!;
+
+    [Required] [StringLength(100)]
+    public string Type { get; set; } = null!;
+
+    [Required] [StringLength(100)]
+    public string Protocol { get; set; } = null!;
+
+    [Required]
+    public bool AllowTareFromIndicator { get; set; } = false;
+}

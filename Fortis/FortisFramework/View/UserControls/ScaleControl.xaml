@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="FortisFramework.View.UserControls.ScaleControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FortisFramework.View.UserControls"
+             xmlns:fortisframework="clr-namespace:FortisFramework"
+             d:DataContext="{d:DesignInstance Type=local:ScaleControlViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="456" Background="White" Foreground="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="{Binding Path=MotionAsString}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="0"/>
+        <Label Content="{Binding Path=WeightTypeAsString}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="1"/>
+        <Label Content="{Binding Path=WeightUnitAsString}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="2"/>
+        <Label Content="Tare weight:" FontSize="10" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="0"/>
+        <Label Content="Gross weight:" FontSize="10" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="0"/>
+        <Label Content="Net weight:" FontSize="10" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"/>
+        <Label Content="{Binding Path=TareWeight}" ContentStringFormat="{Binding Path=DecimalAsFormatString}" FontSize="18" FontWeight="UltraBold" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="{Binding Path=GrossWeight}" ContentStringFormat="{Binding Path=DecimalAsFormatString}" FontSize="18" FontWeight="UltraBold" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="1"/>
+        <Label Content="{Binding Path=NetWeight}" ContentStringFormat="{Binding Path=DecimalAsFormatString}" FontSize="28" FontWeight="UltraBold" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"/>
+    </Grid>
+</UserControl>

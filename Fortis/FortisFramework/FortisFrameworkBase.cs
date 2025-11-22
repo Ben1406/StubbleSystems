@@ -1,7 +1,6 @@
 ﻿using Autofac;
 using FortisDeviceCenter;
 using FortisFramework.Utilities;
-using System.Diagnostics;
 
 namespace FortisFramework;
 

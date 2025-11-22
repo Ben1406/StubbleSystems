@@ -8,6 +8,8 @@ namespace FortisFramework;
 
 internal static class CompositionRoot
 {
+    internal static IContainer BaseContainer = null!;
+
     internal static IContainer Configure()
     {
         var builder = new ContainerBuilder();
@@ -21,7 +23,7 @@ internal static class CompositionRoot
         builder.RegisterType<FortisFrameworkDbContext>();
         builder.RegisterType<DbContext>();
 
-        var container = builder.Build();
-        return container;
+        BaseContainer = builder.Build();
+        return BaseContainer;
     }
 }

@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FortisTest"
         xmlns:frmwrk="clr-namespace:FortisFramework;assembly=FortisFramework"
+        xmlns:userControl="clr-namespace:FortisFramework.View.UserControls;assembly=FortisFramework"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="{Binding Theme.BackgroundColor}">
+        Title="MainWindow" Height="500" Width="800" Background="White" Foreground="Black" FontFamily="Arial">
     <Grid>
-        <Button Content="Test" HorizontalAlignment="Left" Margin="49,30,0,0" VerticalAlignment="Top" Click="ButtonTest_Click"/>
-        <Label Name="LblLog1" Content="..." HorizontalAlignment="Left" Margin="49,55,0,0" VerticalAlignment="Top" Height="34" Width="456" BorderThickness="1" BorderBrush="{Binding Theme.BorderColor}" Background="{Binding Theme.BackgroundColor}" Foreground="{Binding Theme.ForegroundColor}"/>
-        <Label Name="LblLog2" Content="..." HorizontalAlignment="Left" Margin="49,94,0,0" VerticalAlignment="Top" Height="35" Width="456" BorderThickness="1" BorderBrush="{Binding Theme.BorderColor}" Background="{Binding Theme.BackgroundColor}" Foreground="{Binding Theme.ForegroundColor}"/>
-        <Button Content="Weight" HorizontalAlignment="Left" Margin="49,0,0,0" VerticalAlignment="Center" Click="ButtonWeight_Click"/>
-        <Label x:Name="LblScaleWeight" Content="..." HorizontalAlignment="Left" Margin="49,232,0,0" VerticalAlignment="Top" Height="35" Width="456" BorderThickness="1" BorderBrush="{Binding Theme.BorderColor}" Background="{Binding Theme.BackgroundColor}" Foreground="{Binding Theme.ForegroundColor}"/>
-        <Label x:Name="LblBarcodeScanner" Content="..." HorizontalAlignment="Left" Margin="49,272,0,0" VerticalAlignment="Top" Height="35" Width="456" BorderThickness="1" BorderBrush="{Binding Theme.BorderColor}" Background="{Binding Theme.BackgroundColor}" Foreground="{Binding Theme.ForegroundColor}"/>
-
+        <Button x:Name="btnTest" Content="Test" HorizontalAlignment="Left" Margin="49,30,0,0" VerticalAlignment="Top" Click="btnTest_Click"/>
+        <Label x:Name="LblLog1" Content="..." HorizontalAlignment="Left" Margin="49,55,0,0" VerticalAlignment="Top" Height="34" Width="456" BorderThickness="1" BorderBrush="Black"/>
+        <Label x:Name="LblLog2" Content="..." HorizontalAlignment="Left" Margin="49,94,0,0" VerticalAlignment="Top" Height="35" Width="456" BorderThickness="1" BorderBrush="Black"/>
+        <Button x:Name="btnWeight" Content="Weight" HorizontalAlignment="Left" Margin="49,207,0,0" VerticalAlignment="Top" Click="btnWeight_Click"/>
+        <Label x:Name="LblScaleWeight" Content="..." HorizontalAlignment="Left" Margin="49,232,0,0" VerticalAlignment="Top" Height="35" Width="456" BorderThickness="1" BorderBrush="Black"/>
+        <Label x:Name="LblBarcodeScanner" Content="..." HorizontalAlignment="Left" Margin="49,272,0,0" VerticalAlignment="Top" Height="35" Width="456" BorderThickness="1" BorderBrush="Black"/>
+        <userControl:ScaleControl x:Name="ctrlScale" HorizontalAlignment="Left" Margin="49,320,0,0" VerticalAlignment="Top" Height="109" Width="456" BorderThickness="1" BorderBrush="Black"/>
     </Grid>
 </frmwrk:MainWindowBase>

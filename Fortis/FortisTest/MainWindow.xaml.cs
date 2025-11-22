@@ -1,11 +1,11 @@
-﻿using System.Windows;
-using Autofac;
+﻿using Autofac;
 using FortisDeviceCenter;
-using FortisDeviceCenter.Scale;
 using FortisDeviceCenter.BarcodeScanner;
+using FortisDeviceCenter.Scale;
 using FortisFramework;
 using FortisFramework.Utilities;
-using System.Windows.Media;
+using FortisFramework.View.UserControls;
+using System.Windows;
 
 namespace FortisTest;
 
@@ -36,6 +36,8 @@ public partial class MainWindow : MainWindowBase
 
         var @base = new FortisFrameworkBase(systemSettings);
         @base.Initialize();
+
+        ctrlScale.Start();
 
         _deviceCenter = @base.BaseContainer.Resolve<IDeviceCenter>();
 
@@ -94,12 +96,12 @@ public partial class MainWindow : MainWindowBase
         });
     }
 
-    private void ButtonTest_Click(object sender, RoutedEventArgs e)
+    private void btnTest_Click(object sender, RoutedEventArgs e)
     {
         _deviceCenter.TransmitData("Typeless", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "\r\n");
     }
 
-    private void ButtonWeight_Click(object sender, RoutedEventArgs e)
+    private void btnWeight_Click(object sender, RoutedEventArgs e)
     {
         var scaleWeightResult = new ScaleWeightResult
         {
